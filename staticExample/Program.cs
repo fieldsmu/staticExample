@@ -8,15 +8,20 @@ namespace staticExample {
 	class Program {
 		static void Main(string[] args) {
 
-			Technology Git = new Technology {
+			Technology Git = new Technology() {
 				Name = "Git/GitHub",
-				Difficulty = 5
+				Difficulty = Technology.DifficultyType.Easy
 			};
-			Technology.Counter = 1;
 
-			Technology SQL = new Technology {
+			Technology SQL = new Technology() {
 				Name = "SQL Server",
-				Difficulty = 4
+				Difficulty = Technology.DifficultyType.Easy
+			};
+
+			Technology CSharp = new Technology("CSharp Language", Technology.DifficultyType.Normal) {
+			};
+
+			Technology EF = new Technology("Entity Framework", Technology.DifficultyType.Easy) {
 			};
 		}
 	}
